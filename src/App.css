@@ -1,33 +1,155 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+main {
+  width: 100vw;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-content: center;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+button.grey {
+  background-image: linear-gradient(to bottom,#d6d6d6,#d0d0d0);
+  background-image: -webkit-linear-gradient(to bottom,#d6d6d6,#d0d0d0);
+  border: 1px solid #c6c6c6;
+  color: #444;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button.light-grey {
+  background-image: linear-gradient(to bottom,#f5f5f5,#f1f1f1);
+  background-image: -webkit-linear-gradient(to bottom,#f5f5f5,#f1f1f1);
+  border: 1px solid #dedede;
 }
+
+button.blue {
+  background-image: -webkit-linear-gradient(to bottom,#4d90fe,#4787ed);
+  background-color: #4d90fe;
+  background-image: linear-gradient(to bottom,#4d90fe,#4787ed);
+  border: 1px solid #3079ed;
+  color: #fefefe;
+}
+
+button {
+  font-size: 7vmin;
+}
+
+#calculator {
+  display: grid;
+  width: 80vw;
+  height: 80vh;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 0.5fr 0.5fr repeat(5, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  grid-template-areas: 
+    'equation     equation      equation      equation'
+    'display      display       display       display'
+    'clear        bracket-open  bracket-close divide'
+    'seven        eight         nine          add'
+    'four         five          six           subtract'
+    'one          two           three         multiply'
+    'zero         decimal       equals        equals';
+  padding: 5vh 5vw 5vh 5vw;
+  border: 1px solid #dfe1e5;
+  border-radius: 8px;
+  color: #222;
+}
+
+#display {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  grid-area: display;
+  font-size: 7vmin;
+  margin: 2vh 0 2vh;
+  padding-right: 2%;
+  border: 1px solid #d9d9d9;
+}
+
+#equation {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  grid-area: equation;
+  font-size: 4vmin;
+}
+
+#zero {
+  grid-area: zero;
+}
+
+#one {
+  grid-area: one;
+}
+
+#two {
+  grid-area: two;
+}
+
+#three {
+  grid-area: three;
+}
+
+#four {
+  grid-area: four;
+}
+
+#five {
+  grid-area: five;
+}
+
+#six {
+  grid-area: six;
+}
+
+#seven {
+  grid-area: seven;
+}
+
+#eight {
+  grid-area: eight;
+}
+
+#nine {
+  grid-area: nine;
+}
+
+#add {
+  grid-area: add;
+}
+
+#subtract {
+  grid-area: subtract;
+}
+
+#multiply {
+  grid-area: multiply;
+}
+
+#divide {
+  grid-area: divide;
+}
+
+#equals {
+  grid-area: equals;
+}
+
+#decimal {
+  grid-area: decimal;
+}
+
+#bracket-open {
+  grid-area: bracket-open;
+}
+
+#bracket-close {
+  grid-area: bracket-close;
+}
+
+#decimal {
+  grid-area: decimal;
+}
+
+#clear {
+  grid-area: clear;
+}
+
